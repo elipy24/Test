@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meme Maker</title>
+    <script src="{{ url_for('static', filename='scripts.js') }}"></script>
+</head>
+<body>
+    <h1>Create Your Custom Meme</h1>
+    <form id="meme-form" method="POST" action="/customize" enctype="multipart/form-data">
+        <label for="top-text">Top Text:</label>
+        <input type="text" id="top-text" name="top_text" required><br>
+
+        <label for="bottom-text">Bottom Text:</label>
+        <input type="text" id="bottom-text" name="bottom_text" required><br>
+
+        <label for="image">Upload Image (Optional):</label>
+        <input type="file" id="image" name="image"><br>
+
+        <button type="submit">Generate Meme</button>
+    </form>
+</body>
+</html>
